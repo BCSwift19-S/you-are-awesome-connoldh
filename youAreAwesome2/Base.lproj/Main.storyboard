@@ -43,7 +43,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="messageLabel" destination="Up2-fz-9Hz" id="xkm-oW-mnc"/>
+                        <outlet property="awesomeLabel" destination="Up2-fz-9Hz" id="xkm-oW-mnc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
