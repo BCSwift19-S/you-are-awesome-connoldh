@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var awesomeImageView: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
+    var awesomePlayer = AVAudioPlayer()
+    
     var index = -1
     var imageIndex = -1
     let numberOfImages = 12
+    let numberOfSounds = 6
+    var soundIndex = -1
     
     
     override func viewDidLoad() {
@@ -37,6 +42,7 @@ class ViewController: UIViewController {
 //        var newIndex = -1
         var newIndex: Int
         
+        //show a message
         repeat {
             newIndex = Int.random(in: 0..<messages.count)
         }while index == newIndex
@@ -44,6 +50,7 @@ class ViewController: UIViewController {
         index = newIndex
         messageLabel.text = messages[index]
         
+        //show an image
         repeat{
             newIndex = Int.random(in: 0..<numberOfImages)
         }while imageIndex == newIndex
@@ -51,6 +58,33 @@ class ViewController: UIViewController {
         imageIndex = newIndex
         awesomeImageView.image = UIImage(named: "image\(imageIndex)")
         
+        //get a random number to use in soundName file
+        
+        repeat{
+            newIndex = Int.random(in: 0..<numberOfSounds)
+        }while soundIndex == newIndex
+        
+        soundIndex = newIndex
+        
+        //play a sound
+        var soundName = "sound\(soundIndex)"
+        
+        // can we load in file soundname
+        if let sound = NSDataAsset(name: soundName){
+            //check if sound.data is a sound file
+            
+            do{
+                try awesomePlayer = AVAudioPlayer(data: sound.data)
+                awesomePlayer.play()
+            }catch{
+                print("ERROR: data in \(soundName) couldnt be played as a sound")
+                
+            }
+        }else{
+            // if reading the NSDataAsset didnt work,
+            //tell the developer and report the error
+            print("ERROR: file \(soundName) didnt load")
+        }
         
         
         
