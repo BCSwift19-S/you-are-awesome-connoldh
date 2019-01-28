@@ -27,39 +27,66 @@
                                 <color key="textColor" red="0.49672532079999998" green="0.12256831679999999" blue="0.08624526113" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image6" translatesAutoresizingMaskIntoConstraints="NO" id="xq6-NB-K5b">
-                                <rect key="frame" x="31" y="219" width="353" height="607"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image10" translatesAutoresizingMaskIntoConstraints="NO" id="xq6-NB-K5b">
+                                <rect key="frame" x="31" y="-2198" width="353" height="3024"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tZ-Zh-Xa1">
-                                <rect key="frame" x="101.66666666666669" y="181" width="211" height="30"/>
+                                <rect key="frame" x="280" y="181" width="104" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="211" id="IOP-Ti-FJ9"/>
-                                    <constraint firstAttribute="height" constant="30" id="p1O-ce-vee"/>
+                                    <constraint firstAttribute="height" constant="30" id="Z1h-TY-Lr6"/>
+                                    <constraint firstAttribute="width" constant="104" id="cqZ-7s-E8f"/>
                                 </constraints>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WMy-jk-jZ1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEX-TN-aX0">
+                                <rect key="frame" x="31" y="185" width="91" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Npm-mq-RKm"/>
+                                    <constraint firstAttribute="width" constant="91" id="lCQ-gS-cNY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJh-fQ-1J5">
+                                <rect key="frame" x="130" y="180" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="Tqk-TK-xJO"/>
+                                </connections>
+                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T4K-DB-Xt2">
+                                <rect key="frame" x="20" y="219" width="374" height="607"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0tZ-Zh-Xa1" firstAttribute="top" secondItem="Up2-fz-9Hz" secondAttribute="bottom" constant="8" id="6C5-kC-bjU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T4K-DB-Xt2" secondAttribute="bottom" constant="36" id="5QI-G1-Ppn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0tZ-Zh-Xa1" secondAttribute="trailing" constant="30" id="8tE-Jk-NRx"/>
                             <constraint firstItem="xq6-NB-K5b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="9WU-xU-oMe"/>
+                            <constraint firstItem="T4K-DB-Xt2" firstAttribute="top" secondItem="0tZ-Zh-Xa1" secondAttribute="bottom" constant="8" id="A5L-Vl-ec3"/>
+                            <constraint firstItem="0tZ-Zh-Xa1" firstAttribute="top" secondItem="Up2-fz-9Hz" secondAttribute="bottom" constant="8" id="BKN-ub-uKr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xq6-NB-K5b" secondAttribute="bottom" constant="36" id="BmL-t3-ttd"/>
+                            <constraint firstItem="hEX-TN-aX0" firstAttribute="top" secondItem="Up2-fz-9Hz" secondAttribute="bottom" constant="12" id="Fn9-5D-lqe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xq6-NB-K5b" secondAttribute="trailing" constant="30" id="OBp-Ps-dtT"/>
-                            <constraint firstItem="0tZ-Zh-Xa1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vcy-jm-a4x"/>
                             <constraint firstItem="Up2-fz-9Hz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aLg-FU-a6h"/>
+                            <constraint firstItem="KJh-fQ-1J5" firstAttribute="leading" secondItem="hEX-TN-aX0" secondAttribute="trailing" constant="8" id="gbj-xM-Q3h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Up2-fz-9Hz" secondAttribute="trailing" constant="30" id="kbQ-1H-DxF"/>
+                            <constraint firstItem="T4K-DB-Xt2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lzI-7V-r9W"/>
                             <constraint firstItem="Up2-fz-9Hz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rAb-6Q-4uU"/>
+                            <constraint firstItem="hEX-TN-aX0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="reW-kZ-7S3"/>
+                            <constraint firstItem="KJh-fQ-1J5" firstAttribute="top" secondItem="Up2-fz-9Hz" secondAttribute="bottom" constant="7" id="snD-4i-1rf"/>
                             <constraint firstItem="Up2-fz-9Hz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="xac-ke-JS9"/>
-                            <constraint firstItem="xq6-NB-K5b" firstAttribute="top" secondItem="0tZ-Zh-Xa1" secondAttribute="bottom" constant="8" id="yYk-JW-AnQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T4K-DB-Xt2" secondAttribute="trailing" constant="20" id="ypT-oa-hpm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="awesomeImageView" destination="xq6-NB-K5b" id="zwm-82-hmr"/>
+                        <outlet property="awesomeImageView" destination="T4K-DB-Xt2" id="BK3-px-kRx"/>
                         <outlet property="messageLabel" destination="Up2-fz-9Hz" id="xkm-oW-mnc"/>
+                        <outlet property="soundSwitch" destination="KJh-fQ-1J5" id="FM9-3p-AF9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -68,6 +95,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image6" width="4032" height="3024"/>
+        <image name="image10" width="4032" height="3024"/>
     </resources>
 </document>

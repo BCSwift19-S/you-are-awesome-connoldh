@@ -11,8 +11,9 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var awesomeImageView: UIImageView!
+    @IBOutlet weak var soundSwitch: UISwitch!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var awesomeImageView: UIImageView!
     var awesomePlayer = AVAudioPlayer()
     
     var index = -1
@@ -53,6 +54,11 @@ class ViewController: UIViewController {
         return newIndex
     }
     
+    @IBAction func soundSwitchPressed(_ sender: UISwitch) {
+        if soundSwitch.isOn == false && soundIndex != -1{
+                awesomePlayer.stop()
+        }
+    }
     @IBAction func showMessagePressed(_ sender: UIButton) {
         let messages = ["You are Awesome!",
                         "You are Great!",
@@ -85,16 +91,18 @@ class ViewController: UIViewController {
 //
 //        imageIndex = newIndex
         
-        
-        //get a random number to use in soundName file
-        soundIndex = nonRepeatingRandom(lastNumber: soundIndex, maxValue: numberOfSounds)
-//        repeat{
-//            newIndex = Int.random(in: 0..<numberOfSounds)
-//        }while soundIndex == newIndex
-//        soundIndex = newIndex
-        //play a sound
-        let soundName = "sound\(soundIndex)"
-        playSound(soundName: soundName, audioPlayer: &awesomePlayer)
+        if soundSwitch.isOn {
+            //get a random number to use in soundName file
+            soundIndex = nonRepeatingRandom(lastNumber: soundIndex, maxValue: numberOfSounds)
+            //        repeat{
+            //            newIndex = Int.random(in: 0..<numberOfSounds)
+            //        }while soundIndex == newIndex
+            //        soundIndex = newIndex
+            //play a sound
+            let soundName = "sound\(soundIndex)"
+            playSound(soundName: soundName, audioPlayer: &awesomePlayer)
+
+        }
         
         
         
